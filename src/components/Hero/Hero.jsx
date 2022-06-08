@@ -7,9 +7,9 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className='w-full'>
+    <section className='w-full py-12'>
       <div className="w-[80vw] mx-auto flex flex-col lg:flex-row items-start justify-between lg:py-12 ">
-        <div className="lg:basis-1/2 w-full items-start justify-start py-4 relative">
+        <div className="lg:basis-1/2 w-full items-start justify-start relative">
           <div className="absolute bottom-20 lg:bottom-0 lg:-left-10  z-5">
             <Image src={backdrop} alt="backdrop" className='' /> 
           </div> 

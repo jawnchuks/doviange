@@ -7,8 +7,9 @@ import {HiOutlineExternalLink} from 'react-icons/hi'
 
 const AboutSection = () => {
   return (
-    <section className='w-[80vw] mx-auto my-12'>
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-1 lg:gap-20 lg:mb-24">
+    <section className='w-full bg-white py-12'>
+      <div className="w-[80vw] mx-auto my-12">
+         <div className="grid grid-cols-1 lg:grid-cols-5 gap-1 lg:gap-20 lg:mb-24">
         <div className="mt-8 mx-auto">
           <Image src={certified} alt="certified" width={150} height={150}  />
         </div>
@@ -43,6 +44,7 @@ const AboutSection = () => {
         
         </div>
       </div>
+     </div>
     </section>
   )
 }
