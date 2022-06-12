@@ -68,3 +68,14 @@ body {
   transform: translateY(-10px) rotate(-45deg);
   top: 10px;
 }
+
+
+.about-img {
+  width: 100vw;
+  background-image: url(../assets/images/aboutHero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  background-position: bottom center;
+  height: 60vh;
+}

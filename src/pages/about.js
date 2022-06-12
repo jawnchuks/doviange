@@ -1,5 +1,7 @@
 import { ContactSection } from "@component/ContactSection/ContactSection";
+import HeroAbout from "@component/HeroAbout/HeroAbout";
 import Layout from "@component/Layout/Layout";
+import ServicesAbout from "@component/ServicesAbout/ServicesAbout";
 
 export default function about() {
   return (
@@ -10,6 +12,8 @@ export default function about() {
           description: "This is a new description",
         }}
       >
+        <HeroAbout />
+        <ServicesAbout />
         <ContactSection />
       </Layout>
     </div>

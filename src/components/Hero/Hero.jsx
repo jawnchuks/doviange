@@ -24,8 +24,8 @@ const Hero = () => {
                <Image src={textdrop} width={100} height={100} alt="backdrop" className='' /> 
             </div> 
             <h2 className='text-2xl lg:text-5xl font-semibold text-left text-secondary capitalize tracking-normal leading-tight'>creating elegance and comfort</h2>
-            <p className='my-4 lg:my-6 text-sm lg:text-lg text-text-dark tracking-wide'>We transform interior spaces to highly functional, safe and beautiful spaces. All projects we take on are personalized to suit our client&apos;s desire and lifestyle.my-2</p>
-        <Link href="/" >
+            <p className='my-4 lg:my-6 text-sm lg:text-lg text-text-dark tracking-wide'>We transform interior spaces to highly functional, safe and beautiful spaces. All projects we take on are personalized to suit our client&apos;s desire and lifestyle.</p>
+        <Link href="/about" >
             <button className='flex flex-row items-center text-md lg:text-lg text-primary lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300'>Find out more &nbsp; <HiOutlineExternalLink/> </button>
       </Link>
       </div>
