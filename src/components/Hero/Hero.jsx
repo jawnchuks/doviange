@@ -4,11 +4,12 @@ import landing from '@assets/images/landing.jpg'
 import backdrop from '@assets/images/backdrop.svg'
 import textdrop from '@assets/images/textdrop.svg'
 import Link from 'next/link'
+import {HiOutlineExternalLink} from 'react-icons/hi'
 
 const Hero = () => {
   return (
-    <section className='w-full py-12'>
-      <div className="w-[80vw] mx-auto flex flex-col lg:flex-row items-start justify-between lg:py-12 ">
+    <section className='w-full'>
+      <div className="w-[80vw] mx-auto flex flex-col lg:flex-row items-start justify-between py-4 lg:py-12 ">
         <div className="lg:basis-1/2 w-full items-start justify-start relative">
           <div className="absolute bottom-20 lg:bottom-0 lg:-left-10  z-5">
             <Image src={backdrop} alt="backdrop" className='' /> 
@@ -22,11 +23,11 @@ const Hero = () => {
             <div className="hidden lg:flex lg:absolute top-0 lg:-top-[30%] -right-[20%]">
                <Image src={textdrop} width={100} height={100} alt="backdrop" className='' /> 
             </div> 
-            <h2 className='text-2xl lg:text-6xl font-semibold lg:text-left text-center text-secondary capitalize tracking-normal leading-tight'>creating elegance and comfort</h2>
-            <p className='my-4 lg:my-6 text-xs lg:text-lg text-text-dark tracking-wide leading-loose'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt voluptatibus nulla eum soluta voluptate iste? Eveniet distinctio a maxime?</p>
-            <Link href="/">
-            <a className='px-6 py-1 lg:py-2 text-text-light text-xs lg:text-sm tracking-wide leading-loose lg:flex text-sm font-normal border border-primary bg-primary rounded-sm hover:border-accent  hover:bg-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300'>Explore now</a>
-            </Link>
+            <h2 className='text-2xl lg:text-5xl font-semibold text-left text-secondary capitalize tracking-normal leading-tight'>creating elegance and comfort</h2>
+            <p className='my-4 lg:my-6 text-sm lg:text-lg text-text-dark tracking-wide'>We transform interior spaces to highly functional, safe and beautiful spaces. All projects we take on are personalized to suit our client&apos;s desire and lifestyle.my-2</p>
+        <Link href="/" >
+            <button className='flex flex-row items-center text-md lg:text-lg text-primary lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300'>Find out more &nbsp; <HiOutlineExternalLink/> </button>
+      </Link>
       </div>
       </div>
     </section>

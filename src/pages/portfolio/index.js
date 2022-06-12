@@ -1,11 +1,7 @@
-import AboutSection from "@component/AboutSection/AboutSection";
 import { ContactSection } from "@component/ContactSection/ContactSection";
-import Hero from "@component/Hero/Hero";
 import Layout from "@component/Layout/Layout";
-import ProjectSection from "@component/ProjectSection/ProjectSection";
-import Testimonials from "@component/Testimonials/Testimonials";
 
-export default function Home() {
+export default function portfolio() {
   return (
     <div className="w-full bg-background relative overflow-hidden select-none z-2 font-sora">
       <Layout
@@ -14,10 +10,6 @@ export default function Home() {
           description: "This is a new description",
         }}
       >
-        <Hero />
-        <AboutSection />
-        <ProjectSection />
-        <Testimonials />
         <ContactSection />
       </Layout>
     </div>

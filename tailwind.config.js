@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,12 +13,10 @@ module.exports = {
       "text-light": "#FFFAEB",
     },
     extend: {
-      // fontFamily: {
-      //   serif: ["Trocchi", ...defaultTheme.fontFamily.serif],
-      //   trocchi: ["Trocchi"],
-      //   kumar: ["Kumar One Outline"],
-      //   dosis: ["Dosis"],
-      // },
+      fontFamily: {
+        serif: ["Sora", ...defaultTheme.fontFamily.serif],
+        sora: ["Sora"],
+      },
     },
   },
   plugins: [],

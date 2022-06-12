@@ -2,7 +2,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import Footer from "@component/Footer/Footer"
 import Header from "@component/Header/Header"
-import PropTypes from "prop-types"
+
 
 const Layout = ({ children, pageMeta }) => {
 	const meta = {
@@ -37,10 +37,4 @@ const Layout = ({ children, pageMeta }) => {
 		</>
 	)
 }
-
-Layout.propTypes = {
-	children: PropTypes.elementType.isRequired,
-	pageMeta: PropTypes.object,
-}
-
 export default Layout

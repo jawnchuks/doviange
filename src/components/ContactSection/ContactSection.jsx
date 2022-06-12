@@ -6,12 +6,12 @@ export const ContactSection = () => {
     <section className='w-full py-4'>
       <div className="lg:w-[75vw] w-[80vw] mx-auto">
         <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
-            <h2 className="text-3xl text-primary sm:text-4xl">
+            <h2 className="text-2xl lg:text-3xl text-primary">
                 <span className="block font-extrabold">
-                    Want a home redesign ?
+                    Need a home redesign ?
                 </span>
-                <span className="block my-2 text-secondary font-semibold text-sm lg:text-xl">
-                    Why Don&#x27;t you give us a call
+                <span className="block my-2 text-secondary font-semibold text-sm lg:text-lg">
+                    Why don&#x27;t you give us a call
                 </span>
             </h2>
             <div className="lg:mt-0 lg:flex-shrink-0">
