@@ -21,7 +21,7 @@ const Testimonials = () => {
                                     <div className="lg:basis-1/2 w-full">
                                         <Image width={400} height={400} src={testimonialMan} alt="image of profile" className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded" />  
                                       </div>
-                                <div className="lg:basis-1/2 w-full mt-4 flex flex-col justify-between relative px-8">
+                                <div className="lg:basis-1/2 w-full mt-4 flex flex-col justify-between relative lg:px-4">
                                         <p className="lg:block hidden absolute top-[-60%] left-[-30%] text-[30rem] text-primary">&ldquo;</p>
                                         <div>
                                             <h1 className="text-2xl font-semibold xl:leading-loose text-secondary">Wonderful transformation!</h1>
@@ -41,7 +41,7 @@ const Testimonials = () => {
                                     <div className="lg:basis-1/2 w-full">
                                         <Image width={400} height={400} src={testimonialWoman} alt="image of profile" className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded" />  
                                       </div>
-                                <div className="lg:basis-1/2 w-full mt-4 flex flex-col justify-between relative px-4">
+                                <div className="lg:basis-1/2 w-full mt-4 flex flex-col justify-between relative lg:px-4">
                                         <p className="lg:block hidden absolute top-[-60%] left-[-30%] text-[30rem] text-primary">&ldquo;</p>
                                         <div>
                                             <h1 className="text-2xl font-semibold xl:leading-loose text-secondary">They did a fantastic job!</h1>
