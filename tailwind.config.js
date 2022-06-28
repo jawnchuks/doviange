@@ -11,6 +11,7 @@ module.exports = {
       accent: "#F2B440",
       "text-dark": "#211E1D",
       "text-light": "#FFFAEB",
+      gray: "#ACACAC",
     },
     extend: {
       fontFamily: {

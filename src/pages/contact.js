@@ -1,3 +1,5 @@
+import ContactForm from "@component/ContactForm/ContactForm";
+import HeroContact from "@component/HeroContact/HeroContact";
 import Layout from "@component/Layout/Layout";
 
 export default function contact() {
@@ -8,7 +10,11 @@ export default function contact() {
           title: "Doviange - Home of Interior designs",
           description: "This is a new description",
         }}
-      ></Layout>
+      >
+        <HeroContact />
+        <ContactForm />
+      </Layout>
     </div>
   );
 }
+1;

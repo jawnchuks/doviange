@@ -50,7 +50,7 @@ const Header = () => {
 				<div
 				className={`top-0 right-0 md:h-3/6 h-5/6 w-full bg-white drop-shadow-2xl fixed h-full z-40 ease-in-out duration-300`}>
 				{/* menu link */}
-				<div className="mt-[6rem] text-2xl text-text-dark flex flex-col capitalize items-start text-center px-8 py-12">
+				<div className="mt-[2rem] text-2xl text-text-dark flex flex-col capitalize items-start text-center px-8 py-12">
 				<Link href="/"><a className={router.pathname === "/" ? "text-accent my-2" : "tracking-wide leading-loose my-2"}>Home</a></Link>
 				<Link href="/about"><a className={router.pathname === "/about" ? "text-accent my-2" : "tracking-wide  leading-loose my-2"}>Who we are</a></Link>
 				<Link href="/portfolio"><a className={router.pathname === "/portfolio" ? "text-accent my-2" : "tracking-wide  leading-loose my-2"}>Portfolio</a></Link>
