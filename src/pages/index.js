@@ -7,11 +7,11 @@ import Testimonials from "@component/Testimonials/Testimonials";
 
 export default function Home() {
   return (
-    <div className="w-full bg-background relative overflow-hidden select-none z-2 font-sora">
+    <div className="w-full bg-background noisy relative overflow-hidden select-none z-2">
       <Layout
         pageMeta={{
           title: "Doviange - Home of Interior designs",
-          description: "This is a new description",
+          description: "Give your consent, we design a perfect blend of trends and complex architecture, designed by Doviange",
         }}
       >
         <Hero />

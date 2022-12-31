@@ -1,84 +1,165 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router';
-import { IoLogoInstagram, IoLogoYoutube, IoLogoFacebook } from 'react-icons/io';
-import React, { useState } from "react"
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+import React, { useState } from "react";
+import SideNav from "@component/SideNav/SideNav";
 
 const Header = () => {
-	const router = useRouter();
-  const [showSidebar, setShowSidebar] = useState(false)
+  const router = useRouter();
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
+  const handleMenu = () => {
+    disableMenu();
+    setShowSidebar(!showSidebar);
+  };
+
+  const disableMenu = () => {
+    setDisabled(!disabled);
+    setTimeout(() => {
+      setDisabled(false);
+    }, 1500);
+  };
   return (
-    <header className='w-full relative' >
-      <nav className='md:w-[90vw] w-[95vw] mx-auto flex flex-row items-center justify-between px-6 py-4 '>
-        {/* hamburger button*/}
-        <div className="mobile basis-1/4 block lg:hidden">
-          {showSidebar ? (
-            <div onClick={() => setShowSidebar(!showSidebar)} className="fixed hamburger active z-50"><span></span></div>
-					) : (
-				  	<div onClick={() => setShowSidebar(!showSidebar)} className="fixed hamburger z-50"><span></span></div>
-					)}
-        </div>
-
-        {/* logo */}
-        <Link href="/"><a className="logo text-center px-4 text-xl md:text-2xl font-semibold text-text-dark">Doviange</a></Link>
-
-        {/* Links */}
-        <div className="links w-full  basis-1/4 lg:basis-3/4 flex flex-row items-center justify-between">
-          {/* nav links */}
-          <div className='hidden lg:flex flex-row items-center mx-auto justify-center text-text-dark text-md font-semibold'>
-            <Link href="/"><a className={router.pathname === "/" ? "text-accent" : "tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"}>Home</a></Link>
-						
-						<Link href="/about"><a className={router.pathname === "/about" ? "mx-8 text-accent" : "mx-8 tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"}>Who we are</a></Link>
-
-						<Link href="/portfolio"><a className={router.pathname === "/portfolio" ? "text-accent" : "tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"}>Portfolio</a></Link>
-					
-					</div>
-
-          {/* Cta button */}
-          <div className=" flex flex-row">
-            {/* contact us btn */}
-            <Link href="/contact"><button className='hidden text-text-light tracking-wide leading-loose lg:flex items-center text-sm font-normal px-6 py-1 border border-primary bg-primary rounded-sm hover:border-accent  hover:bg-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300'>Contact us</button></Link>
+    <header className="w-full relative ">
+      <nav
+        id="mix"
+        className="w-full fixed backdrop-blur  top-0 inset-x-0 z-50"
+      >
+        <div className="w-[95vw] mx-auto grid grid-cols-2 items-center justify-items-stretch py-4 lg:relative">
+          {/* logo */}
+          <div className="">
+            <Link href="/">
+              <a className="text-center text-xl md:text-3xl font-semibold  text-secondary invert font-cinzel">
+                Doviange
+              </a>
+            </Link>
           </div>
 
-        </div>  
+          {/* Links */}
+          <div className="hidden lg:flex links w-full  flex-row items-center justify-between font-light font-katibeh text-[1.5vw]">
+            {/* nav links */}
+            <div className="hidden lg:flex flex-row items-center mx-auto justify-center text-text-dark invert uppercase">
+              <Link href="/">
+                <a
+                  className={
+                    router.pathname === "/"
+                      ? "mx-4 text-accent"
+                      : "mx-4 tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"
+                  }
+                >
+                  Home
+                </a>
+              </Link>
+
+              <Link href="/about">
+                <a
+                  className={
+                    router.pathname === "/about"
+                      ? "mx-4 text-accent"
+                      : "mx-4 tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"
+                  }
+                >
+                  About us
+                </a>
+              </Link>
+
+              <Link href="/portfolio">
+                <a
+                  className={
+                    router.pathname === "/portfolio"
+                      ? "mx-4 text-accent"
+                      : "mx-4 tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"
+                  }
+                >
+                  Portfolio
+                </a>
+              </Link>
+
+              <Link href="/blog">
+                <a
+                  className={
+                    router.pathname === "/blog"
+                      ? "mx-4 text-accent"
+                      : "mx-4 tracking-wide  hover:text-accent leading-loose lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-130 duration-300"
+                  }
+                >
+                  Blog
+                </a>
+              </Link>
+            </div>
+
+            {/* Cta button */}
+            <div className=" flex flex-row">
+              {/* contact us btn */}
+              <Link href="/contact">
+                <button className="hidden invert text-text-light tracking-wide leading-loose lg:flex items-center text-sm font-sans px-6 py-1 border border-primary bg-primary rounded-full hover:border-accent  hover:bg-accent lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300">
+                  Contact us
+                </button>
+              </Link>
+            </div>
+          </div>
+
+          {/* hamburger button*/}
+          <div className="invert lg:hidden flex items-start justify-end">
+            {showSidebar ? (
+              <button
+                disabled={disabled}
+                onClick={handleMenu}
+                className="button -menu-open z-50 cursor-pointer "
+              >
+                <svg
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 48 48"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <line x1="0" y1="17" x2="48" y2="17" strokeWidth="1" />
+                    <line x1="0" y1="31" x2="48" y2="31" strokeWidth="1" />
+                  </g>
+
+                  <g>
+                    <line x1="0" y1="24" x2="48" y2="24" strokeWidth="1" />
+                    <line x1="0" y1="24" x2="48" y2="24" strokeWidth="1" />
+                  </g>
+                </svg>
+              </button>
+            ) : (
+              <button
+                disabled={disabled}
+                onClick={handleMenu}
+                className="button z-50 cursor-pointer "
+              >
+                <svg
+                  width="40px"
+                  height="40px"
+                  viewBox="0 0 48 48"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <line x1="0" y1="17" x2="48" y2="17" strokeWidth="1" />
+                    <line x1="0" y1="31" x2="48" y2="31" strokeWidth="1" />
+                  </g>
+
+                  <g>
+                    <line x1="0" y1="24" x2="48" y2="24" strokeWidth="1" />
+                    <line x1="0" y1="24" x2="48" y2="24" strokeWidth="1" />
+                  </g>
+                </svg>
+              </button>
+            )}
+          </div>
+        </div>
       </nav>
 
-      			{/* sidebar menu content */}
+      {/* sidebar menu content */}
 
-			<div className={`top-0 w-full bg-accent bg-opacity-10 fixed h-full z-40 ease-in-out duration-300 ${
-					showSidebar ? "-translate-y-0" : "-translate-y-full"
-				}`}>
-				<div
-				className={`top-0 right-0 md:h-3/6 h-5/6 w-full bg-white drop-shadow-2xl fixed h-full z-40 ease-in-out duration-300`}>
-				{/* menu link */}
-				<div className="mt-[2rem] text-2xl text-text-dark flex flex-col capitalize items-start text-center px-8 py-12">
-				<Link href="/"><a className={router.pathname === "/" ? "text-accent my-2" : "tracking-wide leading-loose my-2"}>Home</a></Link>
-				<Link href="/about"><a className={router.pathname === "/about" ? "text-accent my-2" : "tracking-wide  leading-loose my-2"}>Who we are</a></Link>
-				<Link href="/portfolio"><a className={router.pathname === "/portfolio" ? "text-accent my-2" : "tracking-wide  leading-loose my-2"}>Portfolio</a></Link>
-        <Link href="/contact"><a className={router.pathname === "/contact" ? "text-accent my-2" : "tracking-wide  leading-loose my-2"}>Contact us</a></Link>
-				</div>
-
-		
-
-				{/* sidebar footer section */}
-          <div className="fixed bottom-0 flex flex-col justify-center py-4 left-0 bg-gray-100 text-black text-center w-full">
-            {/* social icons only visible on mobile */}
-            <p className='text-xs mt-4 items-center text-text-dark justify-center'>Follow us on:</p>
-            <div className="lg:hidden text-light flex flex-row items-center justify-center ">
-              <Link href="/"><IoLogoInstagram className='w-6 h-6 text-primary' /></Link>
-              <Link href="/"><IoLogoYoutube className='w-6 h-6 mx-2 text-primary' /></Link>
-              <Link href="/"><IoLogoFacebook className='w-6 h-6 text-primary' /></Link>              
-            </div>
-           
-					<span className="text-xs mt-4 items-center text-text-dark justify-center">
-						Copyright &copy; {new Date().getFullYear()}. Jawnchuks studios{" "}
-					</span>
-				</div>
-			</div>
-			</div>
+      <SideNav showSidebar={showSidebar} />
     </header>
+  );
+};
 
-    
-  )
-}
-
-export default Header
+export default Header;

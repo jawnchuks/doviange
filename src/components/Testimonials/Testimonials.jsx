@@ -1,82 +1,249 @@
-import React from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
-import Image from 'next/image';
-import testimonialMan from "@assets/images/testimonial-man.jpg"
-import testimonialWoman from "@assets/images/testimonial-woman.jpg"
-/* Install pure-react-carousel using -> npm i pure-react-carousel */
+import React from "react";
+import bgTestimonials from "@assets/images/bg-testimonials.webp";
 
 const Testimonials = () => {
   return (
-    <section className='w-full bg-white py-12'>
-      <div className="lg:w-[75vw] w-[80vw] mx-auto">
-        <div>
-           <h4 className='my-4 text-xl lg:text-3xl font-semibold text-secondary text-center'>What our customers are saying</h4>
-            <div className='mb-12'></div>
-                <CarouselProvider naturalSlideWidth={100} isIntrinsicHeight={true} totalSlides={2}>
-                    <Slider>
-                        <Slide index={0} tabIndex="null">
-                            <div className="flex">
-                                <div className="mt-14 md:flex">
-                                    <div className="lg:basis-1/2 w-full">
-                                        <Image width={400} height={400} src={testimonialMan} alt="image of profile" className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded" />  
-                                      </div>
-                                <div className="lg:basis-1/2 w-full mt-4 flex flex-col justify-between relative lg:px-4">
-                                        <p className="lg:block hidden absolute top-[-60%] left-[-30%] text-[30rem] text-primary">&ldquo;</p>
-                                        <div>
-                                            <h1 className="text-2xl font-semibold xl:leading-loose text-secondary">Wonderful transformation!</h1>
-                                            <p className="text-base font-medium leading-6 mt-4 text-text-dark">Doviange has an amazing gift to transform your home from ordinary to outstanding! From design to execution they make it fun and even exhilarating. They work to create a plan of action with different options and varying budgets. I highly recommend Doviange for your interior design project.</p>
-                                        </div>
-                                        <div className="md:mt-0 mt-8">
-                                            <p className="text-base font-medium leading-4 text-secondary">Jay Smith</p>
-                                            <p className="text-base leading-4 mt-2 mb-4 text-primary">Architect</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Slide>
-                        <Slide index={1}>
-                            <div className="flex relative" style={{ transform: 'translateX(0%)' }}>
-                                <div className="mt-14 md:flex">
-                                    <div className="lg:basis-1/2 w-full">
-                                        <Image width={400} height={400} src={testimonialWoman} alt="image of profile" className="w-full h-full flex-shrink-0 object-fit object-cover shadow-lg rounded" />  
-                                      </div>
-                                <div className="lg:basis-1/2 w-full mt-4 flex flex-col justify-between relative lg:px-4">
-                                        <p className="lg:block hidden absolute top-[-60%] left-[-30%] text-[30rem] text-primary">&ldquo;</p>
-                                        <div>
-                                            <h1 className="text-2xl font-semibold xl:leading-loose text-secondary">They did a fantastic job!</h1>
-                                            <p className="text-base font-medium leading-6 mt-4 text-text-dark">Doviange did a fantastic job on our master bedroom. They listened carefully to our ideas and brought them to fruition. They are very affordable and work very hard to finish the project in time, in fact they were a day early. I am sure they will be hearing from the people I have given their information to, if they haven&apos;t already.</p>
-                                        </div>
-                                        <div className="md:mt-0 mt-8">
-                                            <p className="text-base font-medium leading-4 text-secondary">Anna Smith</p>
-                                            <p className="text-base leading-4 mt-2 mb-4 text-primary">Senior Web Designer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Slide>
-                    </Slider>
-                    <div className="flex justify-end items-center text-secondary mt-8">
-                        <ButtonBack className="cursor-pointer " role="button" aria-label="previous slide">
-                          <button className="hover:text-accent text-md md:text-2xl lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300">
-                          &larr; prev
-                        </button>
-                        </ButtonBack>
+    <section
+      className="aspect-square w-full relative flex items-center"
+      style={{
+        backgroundImage: `url(${bgTestimonials.src})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top center",
+      }}
+    >
+      <div className="mx-auto max-w-[95vw] px-4 py-16 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0">
+        <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
+          <div className="max-w-xl text-center sm:text-left">
+            <h2 className="lg:text-[3vw] text-[7vw] md:text-[5vw] font-katibeh text-secondary italic tracking-tight ">
+              Dont just take our word for it...
+              <br className="hidden sm:block lg:hidden" />
+              Read reviews from our customers
+            </h2>
+          </div>
 
-                        <ButtonNext role="button" aria-label="next slide" className="cursor-pointer ml-2">
-                          <button className="mx-2 md:mx-6 lg:mx-12 hover:text-accent text-md md:text-2xl lg:transition ease-in-out delay-150 lg:hover:-translate-y-1 lg:hover:scale-110 duration-300">
-                          next &rarr;
-                        </button>
-                        </ButtonNext>
+          <div className="mx-1 lg:col-span-2 lg:mx-0">
+            <div className="swiper-container !overflow-hidden">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">
+                  <blockquote className="flex h-full flex-col justify-between bg-background md:p-8 p-4 border-b border-black/20">
+                    <div>
+                      <div className="flex gap-0.5 text-primary">
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+
+                      <div className="mt-4">
+                        <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
+                          Staying
+                        </p>
+
+                        <p className="mt-4 leading-relaxed text-gray-500">
+                          No, Rose, they are not breathing. And they have no
+                          arms or legs … Where are they? You know what? If we
+                          come across somebody with no arms or legs, do we
+                          bother resuscitating them? I mean, what quality of
+                          life do we have there?
+                        </p>
+                      </div>
                     </div>
-                </CarouselProvider>
+
+                    <footer className="mt-8 text-sm text-gray-500">
+                      &mdash; Michael Scott
+                    </footer>
+                  </blockquote>
+                </div>
+
+                <div className="swiper-slide">
+                  <blockquote className="flex h-full flex-col justify-between bg-background md:p-8 p-4 border-b border-black/20">
+                    <div>
+                      <div className="flex gap-0.5 text-primary">
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+
+                      <div className="mt-4">
+                        <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
+                          Stay Alive
+                        </p>
+
+                        <p className="mt-4 leading-relaxed text-gray-500">
+                          No, Rose, they are not breathing. And they have no
+                          arms or legs … Where are they? You know what? If we
+                          come across somebody with no arms or legs, do we
+                          bother resuscitating them? I mean, what quality of
+                          life do we have there?
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer className="mt-8 text-sm text-gray-500">
+                      &mdash; Michael Scott
+                    </footer>
+                  </blockquote>
+                </div>
+
+                <div className="swiper-slide">
+                  <blockquote className="flex h-full flex-col justify-between bg-background md:p-8 p-4 border-b border-black/20">
+                    <div>
+                      <div className="flex gap-0.5 text-primary">
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+
+                        <svg
+                          className="h-5 w-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+
+                      <div className="mt-4">
+                        <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
+                          Stayin Alive
+                        </p>
+
+                        <p className="mt-4 leading-relaxed text-gray-500">
+                          No, Rose, they are not breathing. And they have no
+                          arms or legs … Where are they? You know what? If we
+                          come across somebody with no arms or legs, do we
+                          bother resuscitating them? I mean, what quality of
+                          life do we have there?
+                        </p>
+                      </div>
+                    </div>
+
+                    <footer className="mt-8 text-sm text-gray-500">
+                      &mdash; Michael Scott
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
-
-
-
+export default Testimonials;
