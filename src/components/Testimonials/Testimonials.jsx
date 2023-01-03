@@ -77,21 +77,19 @@ const Testimonials = () => {
 
                       <div className="mt-4">
                         <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-                          Staying
+                          Doviange interior rocks!
                         </p>
 
                         <p className="mt-4 leading-relaxed text-gray-500">
-                          No, Rose, they are not breathing. And they have no
-                          arms or legs … Where are they? You know what? If we
-                          come across somebody with no arms or legs, do we
-                          bother resuscitating them? I mean, what quality of
-                          life do we have there?
+                          Incredible to work with. They were ideal for my
+                          requirements. excution: On-time delivery with
+                          meticulous attention to detail
                         </p>
                       </div>
                     </div>
 
-                    <footer className="mt-8 text-sm text-gray-500">
-                      &mdash; Michael Scott
+                    <footer className="mt-8 text-sm text-gray-500 ">
+                      &mdash; Mr. Thompson Bello
                     </footer>
                   </blockquote>
                 </div>
@@ -148,21 +146,20 @@ const Testimonials = () => {
 
                       <div className="mt-4">
                         <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-                          Stay Alive
+                          You can trust Doviange
                         </p>
 
                         <p className="mt-4 leading-relaxed text-gray-500">
-                          No, Rose, they are not breathing. And they have no
-                          arms or legs … Where are they? You know what? If we
-                          come across somebody with no arms or legs, do we
-                          bother resuscitating them? I mean, what quality of
-                          life do we have there?
+                          Excellent work by the entire crew; I always felt
+                          confident leaving my home in the care of Doviange when
+                          we went on vacation and returned. Thank you for the
+                          refurbishing
                         </p>
                       </div>
                     </div>
 
                     <footer className="mt-8 text-sm text-gray-500">
-                      &mdash; Michael Scott
+                      &mdash; Uzondu Bethel
                     </footer>
                   </blockquote>
                 </div>
@@ -219,21 +216,20 @@ const Testimonials = () => {
 
                       <div className="mt-4">
                         <p className="text-2xl font-bold text-pink-600 sm:text-3xl">
-                          Stayin Alive
+                          100% Satisfaction
                         </p>
 
                         <p className="mt-4 leading-relaxed text-gray-500">
-                          No, Rose, they are not breathing. And they have no
-                          arms or legs … Where are they? You know what? If we
-                          come across somebody with no arms or legs, do we
-                          bother resuscitating them? I mean, what quality of
-                          life do we have there?
+                          We are overjoyed with the wonderful work. Our
+                          experience with Doviange has been absolutely
+                          fantastic! Overall, the work was done very well, and
+                          we are content.
                         </p>
                       </div>
                     </div>
 
                     <footer className="mt-8 text-sm text-gray-500">
-                      &mdash; Michael Scott
+                      &mdash; Lamidun Yusuf
                     </footer>
                   </blockquote>
                 </div>

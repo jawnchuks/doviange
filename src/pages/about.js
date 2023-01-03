@@ -5,7 +5,7 @@ import ServicesAbout from "@component/ServicesAbout/ServicesAbout";
 
 export default function about() {
   return (
-    <div className="w-full bg-background relative overflow-hidden select-none z-2 font-sora">
+    <div className="w-full bg-background relative overflow-hidden select-none z-2 font-sans">
       <Layout
         pageMeta={{
           title: "About Doviange - Home of Interior designs",

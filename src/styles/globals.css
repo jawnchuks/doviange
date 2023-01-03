@@ -130,12 +130,136 @@ body {
   background-position: bottom center;
   height: 60vh;
 
-}.contact-img {
-  width: 100vw;
-  background-image: url(../assets/images/contactHero.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  background-position: bottom;
-  height: 60vh;
 }
+
+
+/* ---------------------------------------------------amin -----------------------------------------------------------------------*/
+
+
+.menu {
+	padding: 10rem 0 20vh 0;
+	width: 90vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	counter-reset: menucounter;
+}
+
+.menu__item {
+	flex: none;
+	display: flex;
+	justify-content: flex-start;
+	position: relative;
+	padding-left: 3rem;
+}
+
+.menu__item::before {
+	counter-increment: menucounter;
+	content: counters(menucounter, ".", decimal-leading-zero);
+	position: absolute;
+	left: 0;
+	border-left: 3px solid currentColor;
+	top: 20%;
+	height: 60%;
+	padding-left: 1rem;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+	font-weight: bold;
+	opacity: 0;
+	transform: translateX(-1rem);
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu__item:hover::before {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.menu__item-text {
+	position: relative;
+	cursor: pointer;
+	padding: 0.5rem;
+	display: block;
+	overflow: hidden;
+	font-size: 3vw;
+}
+
+.menu__item-textinner {
+	display: block;
+	font-family: goldenbook, serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: var(--color-menu);
+}
+
+.js .menu__item-textinner {
+	transform: translateY(100%);
+}
+
+.menu__item:hover .menu__item-textinner {
+	color: var(--color-menu-hover);
+}
+
+.menu__item-sub {
+	display: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	white-space: nowrap;
+	align-items: center;
+	position: relative;
+	margin-left: 2rem;
+	padding-left: 3rem;
+	opacity: 0;
+	transform: translateX(-1rem);
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu__item:hover .menu__item-sub {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.menu__item-sub::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 15%;
+	width: 1px;
+	height: 70%;
+	background: currentColor;
+	transform-origin: 0 100%;
+	transform: rotate(22.5deg) scale3d(1,0,1);
+	transition: transform 0.3s;
+}
+
+.menu__item:hover .menu__item-sub::before {
+	transform: rotate(22.5deg) scale3d(1,1,1);
+}
+
+
+@media screen and (min-width: 53em) {
+	.menu {
+		padding-top: 20vh;
+	}
+	.menu__item {
+    	padding-left: 5vw;
+    	justify-content: initial;
+    }
+	.menu__item-text {
+		padding: 1vh 0;
+		font-size: 2.5vw;
+	}
+	.menu__item-sub {
+		display: flex;
+	}
+}
+
+/* ------------------------------------------animation----------------------------------------------------------------------------*/
+

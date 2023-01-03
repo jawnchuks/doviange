@@ -18,6 +18,7 @@ const SideNav = ({ showSidebar }) => {
   let link1 = useRef(null);
   let link2 = useRef(null);
   let link3 = useRef(null);
+  let link4 = useRef(null);
   let info = useRef(null);
 
   let externalLink1 = useRef(null);
@@ -51,7 +52,7 @@ const SideNav = ({ showSidebar }) => {
       });
       staggerReveal(revealMenuBackground, revealMenu);
       slideInUp(info);
-      AnimateMenuLinks(link1, link2, link3);
+      AnimateMenuLinks(link1, link2, link3, link4);
       animateExternalLinks(
         externalLink1,
         externalLink2,
@@ -89,8 +90,8 @@ const SideNav = ({ showSidebar }) => {
     });
   };
 
-  const AnimateMenuLinks = (node1, node2, node3) => {
-    gsap.from([node1, node2, node3], {
+  const AnimateMenuLinks = (node1, node2, node3, node4) => {
+    gsap.from([node1, node2, node3, node4], {
       duration: 0.8,
       y: 100,
       delay: 0.2,
@@ -132,7 +133,7 @@ const SideNav = ({ showSidebar }) => {
         <div className="absolute inset-x-0 inset-y-0 w-full h-full opacity-0"></div>
 
         {/* Menu Links */}
-        <div className="container w-[80vw] mx-auto">
+        <div className="container w-[90vw] mx-auto">
           <div className="wrapper relative flex flex-col h-screen ">
             <div className="menu-links flex gap-2 md:flex-row flex-col items-start justify-between relative top-[15%]">
               <nav className="flex">
@@ -152,6 +153,19 @@ const SideNav = ({ showSidebar }) => {
                     </Link>
                   </li>
                   <li ref={(el) => (link2 = el)} className="">
+                    <Link href="/about">
+                      <a
+                        className={
+                          router.pathname === "about"
+                            ? " text-[#D26D25] font-trocchi text-[2rem]"
+                            : "text-[#171627]  hover:text-[#D26D25] text-[2rem]"
+                        }
+                      >
+                        About Us
+                      </a>
+                    </Link>
+                  </li>
+                  <li ref={(el) => (link3 = el)} className="">
                     <Link href="/portfolio">
                       <a
                         className={
@@ -164,16 +178,16 @@ const SideNav = ({ showSidebar }) => {
                       </a>
                     </Link>
                   </li>
-                  <li ref={(el) => (link3 = el)} className="">
-                    <Link href="/articles">
+                  <li ref={(el) => (link4 = el)} className="">
+                    <Link href="/blog">
                       <a
                         className={
-                          router.pathname === "articles"
+                          router.pathname === "blog"
                             ? " text-[#D26D25] font-trocchi text-[2rem]"
                             : "text-[#171627]  hover:text-[#D26D25] text-[2rem]"
                         }
                       >
-                        Articles
+                        Blog
                       </a>
                     </Link>
                   </li>

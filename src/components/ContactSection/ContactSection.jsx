@@ -7,9 +7,14 @@ export const ContactSection = () => {
     <section className="w-full h-screen flex flex-col items-center justify-center py-4 bg-secondary">
       <Marquee
         gradient={false}
+        speed={100}
         style={{ width: "100vw" }}
         className="lg:text-[5vw] w-full text-[8vw] md:text-[6vw] font-cinzel text-accent flex items-center justify-center overflow-hidden"
       >
+        &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
+        &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
+        &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
+        &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
         &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
         &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
         &nbsp;&nbsp;&nbsp;&nbsp; Let&apos;s work together
